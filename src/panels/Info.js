@@ -15,8 +15,8 @@ class Info extends React.Component {
       return (
         <View style={styles.panel}>
           <View style={styles.greetingBox}>
-              <Text>Info</Text>
-              <Text>{this.props.info}</Text>
+              <Text style={{color: 'green'}}>Info</Text>
+              <Text style={{color: 'green'}}>{this.props.info}</Text>
           </View>
         </View>
       );
@@ -35,7 +35,7 @@ class Info extends React.Component {
     },
     greetingBox: {
       padding: 20,
-      backgroundColor: '#FFFFE0',
+      backgroundColor: '#000000',
       borderColor: '#639dda',
       borderWidth: 2,
     }

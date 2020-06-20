@@ -16,7 +16,6 @@ const { AudioModule } = NativeModules
 
 class AudioPanele extends React.Component{
   _onPlayAudio = () => {
-    debugger
     AudioModule.playEnvironmental({
       source: asset('audio/ambient.wav'),
       volume: 0.3
@@ -24,7 +23,6 @@ class AudioPanele extends React.Component{
   }
 
   _onStopAudio = () => {
-    debugger
     AudioModule.stopEnvironmental()
   }
 
@@ -53,8 +51,9 @@ class Buttons extends React.Component {
     }
 
     _onRoomSelected = room => {
+      alert(`Room :${room}`)
+      Environment.setBackgroundImage(asset(`./360_${room.toLowerCase()}.jpg`),{format: '2D'})
       this.props.dispatch(roomSelected(room))
-      Environment.setBackgroundImage(asset(`./360_${room}.jpg`))
     }
 
     _adjacentRooms = (adjacentRooms) => {

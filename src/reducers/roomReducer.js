@@ -7,7 +7,6 @@ let defaultStore = {
 }
 
 export default roomReducer = (state = defaultStore, action) => {
-    
     switch(action.type){
         case 'roomSelected': 
             return {
